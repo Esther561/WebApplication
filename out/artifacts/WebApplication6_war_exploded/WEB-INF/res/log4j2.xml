@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration>
+    <Properties>
+        <!-- Change this field to choose a log file directory
+             For remote deployments, this should be /student/<user>
+             where <user> is your UPI/Username
+
+             Relative paths are relative to the CATALINA_TMPDIR.
+             IntelliJ will print this in the run dialog when you
+             start a servlet. The default (../logs) will store your
+             logfiles in your TOMCAT_INSTALL/logs directory.
+             Absolute paths should use forward slashes for directory
+             separators.                                            -->
+        <Property name="logDirectory">../logs</Property>
+
+        <!-- Change this to choose a different file name -->
+        <Property name="logFileName">logfile-web10</Property>
+    </Properties>
+    <Appenders>
+        <!-- File Appender -->
+        <File name="file" fileName="${logDirectory}/${logFileName}.log" append="true">
+            <JsonLayout compact="false" locationInfo="true" complete="true" includeStacktrace="true" />
+        </File>
+
+        <!-- Console Appender -->
+        <Console name="console" target="SYSTEM_OUT">
+            <PatternLayout>
+                <!-- See https://logging.apache.org/log4j/2.x/manual/layouts.html#PatternLayout -->
+                <!-- Level | DateTime | [thread] Class.Method() (File.java:line) - Message -->
+                <Pattern>%-5p | %d{yyyy-MM-dd HH:mm:ss} | [%t] %C{1}.%M() (%F:%L) - %m%n"</Pattern>
+            </PatternLayout>
+        </Console>
+    </Appenders>
+    <Loggers>
+        <Root level="info">
+            <AppenderRef ref="console" />
+            <AppenderRef ref="file" />
+        </Root>
+    </Loggers>
+</Configuration>
