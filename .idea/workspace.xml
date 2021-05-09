@@ -6,7 +6,9 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c0bd7bb4-0c5a-453d-b886-70812c017e94" name="Default Changelist" comment="" />
+    <list default="true" id="c0bd7bb4-0c5a-453d-b886-70812c017e94" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/scripts/init-db.sql" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/init-db.sql" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
