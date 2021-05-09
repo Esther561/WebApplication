@@ -239,7 +239,7 @@ insert into likes (article_id, user_id) values
   (15, 1),
   (15, 1),
   (15, 1),
-  (15, 1),
+  (15, 14),
   (15, 3),
   (15, 4),
   (15, 7),
